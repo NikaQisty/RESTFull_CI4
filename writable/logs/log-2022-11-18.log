@@ -1,0 +1,625 @@
+CRITICAL - 2022-11-18 09:45:20 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, null given, called in D:\ci-news\app\Controllers\Mahasiswa.php on line 27
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\Mahasiswa.php(27): CodeIgniter\BaseModel->findAll(null)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 09:48:40 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::findAll()
+in APPPATH\Controllers\Mahasiswa.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-18 10:09:16 --> mysqli_sql_exception: Duplicate entry '' for key 'email' in D:\ci-news\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\ci-news\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasis...', 0)
+#1 D:\ci-news\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasis...')
+#2 D:\ci-news\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasis...')
+#3 D:\ci-news\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasis...', Array, false)
+#4 D:\ci-news\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\ci-news\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\ci-news\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\ci-news\app\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('4', Array)
+#8 D:\ci-news\system\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('4')
+#9 D:\ci-news\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 D:\ci-news\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\ci-news\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\ci-news\system\Commands\Server\rewrite.php(46): require_once('D:\\ci-news\\publ...')
+#13 {main}
+CRITICAL - 2022-11-18 10:09:16 --> Duplicate entry '' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:09:16\'
+WHERE `mahasiswa`.`id` IN (\'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:09:16\'
+WHERE `mahasiswa`.`id` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:09:16\'
+WHERE `mahasiswa`.`id` IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `email` = :email:, `nim` = :nim:, `fullname` = :fullname:, `user_image` = :user_image:, `updated_at` = :updated_at:
+WHERE `mahasiswa`.`id` IN :mahasiswa.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('4', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('4')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-18 10:09:47 --> mysqli_sql_exception: Duplicate entry '' for key 'email' in D:\ci-news\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\ci-news\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasis...', 0)
+#1 D:\ci-news\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasis...')
+#2 D:\ci-news\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasis...')
+#3 D:\ci-news\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasis...', Array, false)
+#4 D:\ci-news\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\ci-news\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\ci-news\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\ci-news\app\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('4', Array)
+#8 D:\ci-news\system\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('4')
+#9 D:\ci-news\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 D:\ci-news\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\ci-news\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\ci-news\system\Commands\Server\rewrite.php(46): require_once('D:\\ci-news\\publ...')
+#13 {main}
+CRITICAL - 2022-11-18 10:09:47 --> Duplicate entry '' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:09:47\'
+WHERE `mahasiswa`.`id` IN (\'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:09:47\'
+WHERE `mahasiswa`.`id` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:09:47\'
+WHERE `mahasiswa`.`id` IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `email` = :email:, `nim` = :nim:, `fullname` = :fullname:, `user_image` = :user_image:, `updated_at` = :updated_at:
+WHERE `mahasiswa`.`id` IN :mahasiswa.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('4', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('4')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-18 10:09:53 --> mysqli_sql_exception: Duplicate entry '' for key 'email' in D:\ci-news\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\ci-news\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasis...', 0)
+#1 D:\ci-news\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasis...')
+#2 D:\ci-news\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasis...')
+#3 D:\ci-news\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasis...', Array, false)
+#4 D:\ci-news\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\ci-news\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\ci-news\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\ci-news\app\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('4', Array)
+#8 D:\ci-news\system\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('4')
+#9 D:\ci-news\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 D:\ci-news\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\ci-news\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\ci-news\system\Commands\Server\rewrite.php(46): require_once('D:\\ci-news\\publ...')
+#13 {main}
+CRITICAL - 2022-11-18 10:09:53 --> Duplicate entry '' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:09:53\'
+WHERE `mahasiswa`.`id` IN (\'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:09:53\'
+WHERE `mahasiswa`.`id` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:09:53\'
+WHERE `mahasiswa`.`id` IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `email` = :email:, `nim` = :nim:, `fullname` = :fullname:, `user_image` = :user_image:, `updated_at` = :updated_at:
+WHERE `mahasiswa`.`id` IN :mahasiswa.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('4', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('4')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-18 10:11:31 --> mysqli_sql_exception: Duplicate entry '' for key 'email' in D:\ci-news\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\ci-news\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasis...', 0)
+#1 D:\ci-news\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasis...')
+#2 D:\ci-news\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasis...')
+#3 D:\ci-news\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasis...', Array, false)
+#4 D:\ci-news\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\ci-news\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\ci-news\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\ci-news\app\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('1', Array)
+#8 D:\ci-news\system\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+#9 D:\ci-news\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 D:\ci-news\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\ci-news\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\ci-news\system\Commands\Server\rewrite.php(46): require_once('D:\\ci-news\\publ...')
+#13 {main}
+CRITICAL - 2022-11-18 10:11:31 --> Duplicate entry '' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:11:31\'
+WHERE `mahasiswa`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:11:31\'
+WHERE `mahasiswa`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:11:31\'
+WHERE `mahasiswa`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `email` = :email:, `nim` = :nim:, `fullname` = :fullname:, `user_image` = :user_image:, `updated_at` = :updated_at:
+WHERE `mahasiswa`.`id` IN :mahasiswa.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-18 10:12:14 --> mysqli_sql_exception: Duplicate entry '' for key 'email' in D:\ci-news\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\ci-news\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasis...', 0)
+#1 D:\ci-news\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasis...')
+#2 D:\ci-news\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasis...')
+#3 D:\ci-news\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasis...', Array, false)
+#4 D:\ci-news\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\ci-news\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\ci-news\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\ci-news\app\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('1', Array)
+#8 D:\ci-news\system\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+#9 D:\ci-news\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 D:\ci-news\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\ci-news\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\ci-news\system\Commands\Server\rewrite.php(46): require_once('D:\\ci-news\\publ...')
+#13 {main}
+CRITICAL - 2022-11-18 10:12:14 --> Duplicate entry '' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:12:14\'
+WHERE `mahasiswa`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:12:14\'
+WHERE `mahasiswa`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:12:14\'
+WHERE `mahasiswa`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `email` = :email:, `nim` = :nim:, `fullname` = :fullname:, `user_image` = :user_image:, `updated_at` = :updated_at:
+WHERE `mahasiswa`.`id` IN :mahasiswa.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 10:14:46 --> Call to undefined method App\Models\MahasiswaModel::modified
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Mahasiswa.php(147): CodeIgniter\Model->__call('modified', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 10:16:54 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1624.
+ 1 SYSTEMPATH\BaseModel.php(709): CodeIgniter\BaseModel->transformDataToArray('1', 'insert')
+ 2 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert('1', false)
+ 3 SYSTEMPATH\BaseModel.php(659): CodeIgniter\Model->insert('1', false)
+ 4 APPPATH\Controllers\Mahasiswa.php(147): CodeIgniter\BaseModel->save('1', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-18 10:18:10 --> mysqli_sql_exception: Duplicate entry '' for key 'email' in D:\ci-news\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\ci-news\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasis...', 0)
+#1 D:\ci-news\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasis...')
+#2 D:\ci-news\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasis...')
+#3 D:\ci-news\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasis...', Array, false)
+#4 D:\ci-news\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\ci-news\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\ci-news\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\ci-news\app\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('1', Array)
+#8 D:\ci-news\system\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+#9 D:\ci-news\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 D:\ci-news\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\ci-news\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\ci-news\system\Commands\Server\rewrite.php(46): require_once('D:\\ci-news\\publ...')
+#13 {main}
+CRITICAL - 2022-11-18 10:18:10 --> Duplicate entry '' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:18:10\'
+WHERE `mahasiswa`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:18:10\'
+WHERE `mahasiswa`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:18:10\'
+WHERE `mahasiswa`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `email` = :email:, `nim` = :nim:, `fullname` = :fullname:, `user_image` = :user_image:, `updated_at` = :updated_at:
+WHERE `mahasiswa`.`id` IN :mahasiswa.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 10:18:49 --> CodeIgniter\Validation\Rules::is_unique(): Argument #2 ($field) must be of type string, null given, called in D:\ci-news\system\Validation\Validation.php on line 314
+in SYSTEMPATH\Validation\Rules.php on line 126.
+ 1 SYSTEMPATH\Validation\Validation.php(314): CodeIgniter\Validation\Rules->is_unique('reo@gmail.com', null)
+ 2 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'reo@gmail.com', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Mahasiswa.php(107): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 10:19:39 --> CodeIgniter\Validation\Rules::is_unique(): Argument #2 ($field) must be of type string, null given, called in D:\ci-news\system\Validation\Validation.php on line 314
+in SYSTEMPATH\Validation\Rules.php on line 126.
+ 1 SYSTEMPATH\Validation\Validation.php(314): CodeIgniter\Validation\Rules->is_unique('reo@gmail.com', null)
+ 2 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'reo@gmail.com', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Mahasiswa.php(107): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-18 10:21:59 --> mysqli_sql_exception: Duplicate entry '' for key 'email' in D:\ci-news\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\ci-news\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasis...', 0)
+#1 D:\ci-news\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasis...')
+#2 D:\ci-news\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasis...')
+#3 D:\ci-news\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasis...', Array, false)
+#4 D:\ci-news\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\ci-news\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\ci-news\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\ci-news\app\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('1', Array)
+#8 D:\ci-news\system\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+#9 D:\ci-news\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 D:\ci-news\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\ci-news\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\ci-news\system\Commands\Server\rewrite.php(46): require_once('D:\\ci-news\\publ...')
+#13 {main}
+CRITICAL - 2022-11-18 10:21:59 --> Duplicate entry '' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:21:59\'
+WHERE `mahasiswa`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:21:59\'
+WHERE `mahasiswa`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:21:59\'
+WHERE `mahasiswa`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `email` = :email:, `nim` = :nim:, `fullname` = :fullname:, `user_image` = :user_image:, `updated_at` = :updated_at:
+WHERE `mahasiswa`.`id` IN :mahasiswa.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-18 10:26:23 --> mysqli_sql_exception: Duplicate entry '' for key 'email' in D:\ci-news\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\ci-news\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasis...', 0)
+#1 D:\ci-news\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasis...')
+#2 D:\ci-news\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasis...')
+#3 D:\ci-news\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasis...', Array, false)
+#4 D:\ci-news\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\ci-news\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\ci-news\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\ci-news\app\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('1', Array)
+#8 D:\ci-news\system\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+#9 D:\ci-news\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 D:\ci-news\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\ci-news\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\ci-news\system\Commands\Server\rewrite.php(46): require_once('D:\\ci-news\\publ...')
+#13 {main}
+CRITICAL - 2022-11-18 10:26:23 --> Duplicate entry '' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:26:23\'
+WHERE `mahasiswa`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:26:23\'
+WHERE `mahasiswa`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:26:23\'
+WHERE `mahasiswa`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `email` = :email:, `nim` = :nim:, `fullname` = :fullname:, `user_image` = :user_image:, `updated_at` = :updated_at:
+WHERE `mahasiswa`.`id` IN :mahasiswa.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-18 10:27:05 --> mysqli_sql_exception: Duplicate entry '' for key 'email' in D:\ci-news\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\ci-news\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasis...', 0)
+#1 D:\ci-news\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasis...')
+#2 D:\ci-news\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasis...')
+#3 D:\ci-news\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasis...', Array, false)
+#4 D:\ci-news\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\ci-news\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\ci-news\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\ci-news\app\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('1', Array)
+#8 D:\ci-news\system\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+#9 D:\ci-news\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 D:\ci-news\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\ci-news\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\ci-news\system\Commands\Server\rewrite.php(46): require_once('D:\\ci-news\\publ...')
+#13 {main}
+CRITICAL - 2022-11-18 10:27:05 --> Duplicate entry '' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:27:05\'
+WHERE `mahasiswa`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:27:05\'
+WHERE `mahasiswa`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:27:05\'
+WHERE `mahasiswa`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `email` = :email:, `nim` = :nim:, `fullname` = :fullname:, `user_image` = :user_image:, `updated_at` = :updated_at:
+WHERE `mahasiswa`.`id` IN :mahasiswa.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-18 10:27:47 --> mysqli_sql_exception: Duplicate entry '' for key 'email' in D:\ci-news\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\ci-news\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasis...', 0)
+#1 D:\ci-news\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasis...')
+#2 D:\ci-news\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasis...')
+#3 D:\ci-news\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasis...', Array, false)
+#4 D:\ci-news\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\ci-news\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\ci-news\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\ci-news\app\Controllers\Mahasiswa.php(110): CodeIgniter\Model->update('1', Array)
+#8 D:\ci-news\system\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+#9 D:\ci-news\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 D:\ci-news\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\ci-news\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\ci-news\system\Commands\Server\rewrite.php(46): require_once('D:\\ci-news\\publ...')
+#13 {main}
+CRITICAL - 2022-11-18 10:27:47 --> Duplicate entry '' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:27:47\'
+WHERE `mahasiswa`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:27:47\'
+WHERE `mahasiswa`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:27:47\'
+WHERE `mahasiswa`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `email` = :email:, `nim` = :nim:, `fullname` = :fullname:, `user_image` = :user_image:, `updated_at` = :updated_at:
+WHERE `mahasiswa`.`id` IN :mahasiswa.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Mahasiswa.php(110): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 10:32:20 --> Call to undefined method App\Models\MahasiswaModel::modified
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Mahasiswa.php(147): CodeIgniter\Model->__call('modified', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-18 10:34:53 --> mysqli_sql_exception: Duplicate entry '' for key 'email' in D:\ci-news\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\ci-news\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasis...', 0)
+#1 D:\ci-news\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasis...')
+#2 D:\ci-news\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasis...')
+#3 D:\ci-news\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasis...', Array, false)
+#4 D:\ci-news\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\ci-news\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\ci-news\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\ci-news\app\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('1', Array)
+#8 D:\ci-news\system\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+#9 D:\ci-news\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 D:\ci-news\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\ci-news\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\ci-news\system\Commands\Server\rewrite.php(46): require_once('D:\\ci-news\\publ...')
+#13 {main}
+CRITICAL - 2022-11-18 10:34:53 --> Duplicate entry '' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:34:53\'
+WHERE `mahasiswa`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:34:53\'
+WHERE `mahasiswa`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:34:53\'
+WHERE `mahasiswa`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `email` = :email:, `nim` = :nim:, `fullname` = :fullname:, `user_image` = :user_image:, `updated_at` = :updated_at:
+WHERE `mahasiswa`.`id` IN :mahasiswa.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('1')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-18 10:35:08 --> mysqli_sql_exception: Duplicate entry '' for key 'email' in D:\ci-news\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\ci-news\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasis...', 0)
+#1 D:\ci-news\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasis...')
+#2 D:\ci-news\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasis...')
+#3 D:\ci-news\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasis...', Array, false)
+#4 D:\ci-news\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\ci-news\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\ci-news\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\ci-news\app\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('4', Array)
+#8 D:\ci-news\system\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('4')
+#9 D:\ci-news\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 D:\ci-news\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\ci-news\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\ci-news\system\Commands\Server\rewrite.php(46): require_once('D:\\ci-news\\publ...')
+#13 {main}
+CRITICAL - 2022-11-18 10:35:08 --> Duplicate entry '' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:35:08\'
+WHERE `mahasiswa`.`id` IN (\'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:35:08\'
+WHERE `mahasiswa`.`id` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:35:08\'
+WHERE `mahasiswa`.`id` IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `email` = :email:, `nim` = :nim:, `fullname` = :fullname:, `user_image` = :user_image:, `updated_at` = :updated_at:
+WHERE `mahasiswa`.`id` IN :mahasiswa.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('4', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('4')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-18 10:36:33 --> mysqli_sql_exception: Duplicate entry '' for key 'email' in D:\ci-news\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\ci-news\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasis...', 0)
+#1 D:\ci-news\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasis...')
+#2 D:\ci-news\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasis...')
+#3 D:\ci-news\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasis...', Array, false)
+#4 D:\ci-news\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\ci-news\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\ci-news\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\ci-news\app\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('4', Array)
+#8 D:\ci-news\system\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('4')
+#9 D:\ci-news\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 D:\ci-news\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\ci-news\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\ci-news\system\Commands\Server\rewrite.php(46): require_once('D:\\ci-news\\publ...')
+#13 {main}
+CRITICAL - 2022-11-18 10:36:33 --> Duplicate entry '' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:36:33\'
+WHERE `mahasiswa`.`id` IN (\'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:36:33\'
+WHERE `mahasiswa`.`id` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:36:33\'
+WHERE `mahasiswa`.`id` IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `email` = :email:, `nim` = :nim:, `fullname` = :fullname:, `user_image` = :user_image:, `updated_at` = :updated_at:
+WHERE `mahasiswa`.`id` IN :mahasiswa.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('4', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('4')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-18 10:36:47 --> mysqli_sql_exception: Duplicate entry '' for key 'email' in D:\ci-news\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\ci-news\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasis...', 0)
+#1 D:\ci-news\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasis...')
+#2 D:\ci-news\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasis...')
+#3 D:\ci-news\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasis...', Array, false)
+#4 D:\ci-news\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\ci-news\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\ci-news\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\ci-news\app\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('4', Array)
+#8 D:\ci-news\system\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('4')
+#9 D:\ci-news\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 D:\ci-news\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\ci-news\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\ci-news\system\Commands\Server\rewrite.php(46): require_once('D:\\ci-news\\publ...')
+#13 {main}
+CRITICAL - 2022-11-18 10:36:47 --> Duplicate entry '' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:36:47\'
+WHERE `mahasiswa`.`id` IN (\'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:36:47\'
+WHERE `mahasiswa`.`id` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasiswa` SET `email` = NULL, `nim` = NULL, `fullname` = NULL, `user_image` = NULL, `updated_at` = \'2022-11-18 10:36:47\'
+WHERE `mahasiswa`.`id` IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `email` = :email:, `nim` = :nim:, `fullname` = :fullname:, `user_image` = :user_image:, `updated_at` = :updated_at:
+WHERE `mahasiswa`.`id` IN :mahasiswa.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update('4', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('4')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 10:42:31 --> Undefined property: App\Controllers\Mahasiswa::$respond
+in APPPATH\Controllers\Mahasiswa.php on line 156.
+ 1 APPPATH\Controllers\Mahasiswa.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Mahasiswa::$respond', 'APPPATH\\Controllers\\Mahasiswa.php', 156)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('3')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 10:45:49 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1598.
+ 1 SYSTEMPATH\BaseModel.php(1598): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Mahasiswa.php(147): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('3')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 10:57:06 --> Optional parameter $id declared before required parameter $data is implicitly treated as a required parameter
+in APPPATH\Controllers\Mahasiswa.php on line 103.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(282): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Optional parameter $id declared before required parameter $data is implicitly treated as a required parameter', 'APPPATH\\Controllers\\Mahasiswa.php', 103)
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(282): include_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Mahasiswa.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Mahasiswa')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Mahasiswa')
+ 6 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Mahasiswa', true)
+ 7 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 10:59:30 --> Undefined property: App\Controllers\Mahasiswa::$put
+in APPPATH\Controllers\Mahasiswa.php on line 107.
+ 1 APPPATH\Controllers\Mahasiswa.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Mahasiswa::$put', 'APPPATH\\Controllers\\Mahasiswa.php', 107)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('3')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 11:07:13 --> Undefined variable $mahasiswa
+in APPPATH\Controllers\Mahasiswa.php on line 142.
+ 1 APPPATH\Controllers\Mahasiswa.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mahasiswa', 'APPPATH\\Controllers\\Mahasiswa.php', 142)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('3')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 11:07:53 --> Undefined property: App\Controllers\Mahasiswa::$mahasiwaModel
+in APPPATH\Controllers\Mahasiswa.php on line 142.
+ 1 APPPATH\Controllers\Mahasiswa.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Mahasiswa::$mahasiwaModel', 'APPPATH\\Controllers\\Mahasiswa.php', 142)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('3')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 11:09:19 --> Undefined variable $mahasiwaModel
+in APPPATH\Controllers\Mahasiswa.php on line 142.
+ 1 APPPATH\Controllers\Mahasiswa.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mahasiwaModel', 'APPPATH\\Controllers\\Mahasiswa.php', 142)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('3')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 11:09:25 --> Undefined property: App\Controllers\Mahasiswa::$mahasiwaModel
+in APPPATH\Controllers\Mahasiswa.php on line 142.
+ 1 APPPATH\Controllers\Mahasiswa.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Mahasiswa::$mahasiwaModel', 'APPPATH\\Controllers\\Mahasiswa.php', 142)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('3')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
