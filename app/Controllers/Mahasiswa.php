@@ -158,7 +158,7 @@ class Mahasiswa extends ResourceController
             'email' => $data['email'],
             'nim' => $data['nim'],
             'fullname' => $data['fullname'],
-            'userImage' => $data['userImage'],
+            'user_image' => $data['userImage'],
         ]);
         if ($return == true) {
             $this->response->setStatusCode(200);
@@ -169,6 +169,30 @@ class Mahasiswa extends ResourceController
             return $this->response->setJSON($data);
         }
     }
+
+// VERSI BELUM BERES
+    // public function modified($id = null)
+    // {
+    //     $mahasiswa = $this->mahasiswaModel->getMahasiswa($id);
+
+    //     if (!mahasiswa)
+    //     {
+    //         $this->response->setStatusCode(404);
+    //         return $this->response->setJSON([
+    //             'statusCode' => 404,
+    //             'status' => "fail",
+    //             'message' => "Mahasiswa gagal diubah. Id $id tidak ditemukan.",
+    //         ]);
+    //     }
+
+    //     $data['email'] = $this->request->getVar('email') ?: $mahasiswa['email'];
+    //     $data['nim'] = $this->request->getVar('nim') ?: $mahasiswa['nim'];
+    //     $data['fullname'] = $this->request->getVar('fullname') ?: $mahasiswa['fullname'];
+    //     $data['user_image'] = $this->request->getVar('userImage') ?: $mahasiswa['user_image'];
+
+    //     return $this->response->setJSON($data);
+
+    // }
 
     public function remove($id=null)
     {
