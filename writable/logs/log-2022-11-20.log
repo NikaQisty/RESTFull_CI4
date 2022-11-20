@@ -1,0 +1,43 @@
+CRITICAL - 2022-11-20 09:24:25 --> Undefined constant "App\Controllers\mahasiswa"
+in APPPATH\Controllers\Mahasiswa.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('6')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 09:25:24 --> Undefined constant "App\Controllers\mahasiswa"
+in APPPATH\Controllers\Mahasiswa.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('6')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 09:25:36 --> Undefined constant "App\Controllers\mahasiswa"
+in APPPATH\Controllers\Mahasiswa.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('6')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 09:25:38 --> Undefined constant "App\Controllers\mahasiswa"
+in APPPATH\Controllers\Mahasiswa.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('6')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 09:26:00 --> Undefined constant "App\Controllers\mahasiswa"
+in APPPATH\Controllers\Mahasiswa.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('6')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 09:47:47 --> Undefined variable $mahasiswa
+in APPPATH\Controllers\Mahasiswa.php on line 160.
+ 1 APPPATH\Controllers\Mahasiswa.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mahasiswa', 'APPPATH\\Controllers\\Mahasiswa.php', 160)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('6')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
