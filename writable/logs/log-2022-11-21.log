@@ -1,0 +1,37 @@
+ERROR - 2022-11-21 00:01:09 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\ci-news\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\ci-news\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'ci4rest', 3306, '', 0)
+#1 D:\ci-news\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\ci-news\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\ci-news\system\Database\BaseBuilder.php(1614): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#4 D:\ci-news\app\Controllers\Mahasiswa.php(23): CodeIgniter\Database\BaseBuilder->countAll()
+#5 D:\ci-news\system\CodeIgniter.php(927): App\Controllers\Mahasiswa->index()
+#6 D:\ci-news\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 D:\ci-news\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\ci-news\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\ci-news\system\Commands\Server\rewrite.php(46): require_once('D:\\ci-news\\publ...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\ci-news\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\ci-news\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\ci-news\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\ci-news\system\Database\BaseBuilder.php(1614): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#3 D:\ci-news\app\Controllers\Mahasiswa.php(23): CodeIgniter\Database\BaseBuilder->countAll()
+#4 D:\ci-news\system\CodeIgniter.php(927): App\Controllers\Mahasiswa->index()
+#5 D:\ci-news\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#6 D:\ci-news\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\ci-news\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\ci-news\system\Commands\Server\rewrite.php(46): require_once('D:\\ci-news\\publ...')
+#9 {main}
+CRITICAL - 2022-11-21 00:01:09 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1614): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows` FROM `mahasiswa`', null, false)
+ 3 APPPATH\Controllers\Mahasiswa.php(23): CodeIgniter\Database\BaseBuilder->countAll()
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

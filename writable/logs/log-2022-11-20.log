@@ -48,3 +48,37 @@ in APPPATH\Controllers\Mahasiswa.php on line 177.
  3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 11:16:19 --> Undefined constant "App\Controllers\mahasiswa"
+in APPPATH\Controllers\Mahasiswa.php on line 178.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('6')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 11:19:54 --> Call to undefined method App\Models\MahasiswaModel::countAllResult
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Models\MahasiswaModel.php(54): CodeIgniter\Model->__call('countAllResult', [])
+ 2 APPPATH\Controllers\Mahasiswa.php(201): App\Models\MahasiswaModel->mahasiswaIsExist('afasdadassa@gmail.com', null)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('6')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 11:20:04 --> Call to undefined method App\Models\MahasiswaModel::countAllResult
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Models\MahasiswaModel.php(54): CodeIgniter\Model->__call('countAllResult', [])
+ 2 APPPATH\Controllers\Mahasiswa.php(201): App\Models\MahasiswaModel->mahasiswaIsExist('ggggg@gmail.com', null)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('6')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 11:25:55 --> Call to undefined method App\Models\MahasiswaModel::countAllResult
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Models\MahasiswaModel.php(54): CodeIgniter\Model->__call('countAllResult', [])
+ 2 APPPATH\Controllers\Mahasiswa.php(201): App\Models\MahasiswaModel->mahasiswaIsExist('ggggg@gmail.com', null)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Mahasiswa->modified('6')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

@@ -45,6 +45,18 @@ class MahasiswaModel extends Model
         if($id == false){
             return $this -> findAll();
         }
-        return $this -> where (['id'=> $id]) -> first();
+        // return $this -> where (['id'=> $id]) -> first();
+        return $this -> find($id);
     }
+
+    // public function mahasiswaIsExist($email=null, $nim=null)
+    // {
+    //     $mahasiswa = $this->where('email', $email)->orWhere('nim', $nim)->countAllResult();
+
+    //     if($mahasiswa > 0){
+    //         return true;
+    //     }else{
+    //         return false;
+    //     }
+    // }
 }
